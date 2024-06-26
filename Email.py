@@ -13,7 +13,7 @@ class Emailer:
         msg['Subject'] = subject  
         msg.set_content(body)
 
-        smtp_server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        smtp_server = smtplib.SMTP_SSL('smtp.gmail.com', st.sectrets['PORT'])
         smtp_server.login(self.email, self.password)
         smtp_server.send_message(msg)
         smtp_server.quit()
@@ -21,10 +21,10 @@ class Emailer:
 
 class SendEmail:
 
-    def __init__(self, email):
-        self.emailer = Emailer('noreply.cdc.cit@gmail.com', 'nyyd hlef edqh bgmz')
+    def __init__(self, email, subject):
+        self.emailer = Emailer(st.secrets['EMAIL'], st.secrets['PASS_KEY'])
         self.receiver = email
-        self.subject = 'Trial'
+        self.subject = subject
 
     def sendMessage(self, message):
         self.emailer.send(self.receiver, self.subject, message)
