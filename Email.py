@@ -21,10 +21,11 @@ class Emailer:
 
 class SendEmail:
 
-    def __init__(self, email, subject):
+    def __init__(self, email, subject, body):
         self.emailer = Emailer(st.secrets['EMAIL'], st.secrets['PASS_KEY'])
         self.receiver = email
         self.subject = subject
+        self.body = body
 
-    def sendMessage(self, message):
-        self.emailer.send(self.receiver, self.subject, message)
+    def sendMessage(self):
+        self.emailer.send(self.receiver, self.subject, self.body)
