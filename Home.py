@@ -45,5 +45,7 @@ if type(st.session_state.get('data')) == pd.DataFrame:
 
         SendEmail(row_email, row_subject, row_body).sendMessage()
 
+      st.success('Sent Messages to Emails Sucessfully.')
+
 else:
   st.info('Upload File to intereact with Interface.')
