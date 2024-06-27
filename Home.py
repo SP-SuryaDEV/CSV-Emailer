@@ -10,7 +10,8 @@ def evaluateAngular(index, text):
   evaluation_dict = {
     '<NAME>' : 'Name',
     '<YEAR>' : 'Year',
-    '<DOMAIN>' : 'Which skill do you prioritize the most (1st priority)?'
+    '<DOMAIN>' : '1st Priotity',
+    '<TIME>' : 'Time'
   }
 
   if containsAngular(text):
