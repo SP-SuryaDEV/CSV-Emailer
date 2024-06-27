@@ -46,7 +46,7 @@ if type(st.session_state.get('data')) == pd.DataFrame:
         row_subject = evaluateAngular(ind, email_subject)
         row_body = evaluateAngular(ind, email_body)
 
-        SendEmail(row_email, row_subject, f"""{row_body}""".strip()).sendMessage()
+        SendEmail(row_email, row_subject, f"""\n{row_body}""").sendMessage()
 
       st.success('Sent Messages to Emails Sucessfully.')
 
