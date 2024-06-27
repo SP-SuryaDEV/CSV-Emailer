@@ -44,3 +44,6 @@ if type(st.session_state.get('data')) == pd.DataFrame:
         row_body = evaluateAngular(ind, email_body)
 
         SendEmail(row_email, row_subject, row_body).sendMessage()
+
+else:
+  st.info('Upload File to intereact with Interface.')
