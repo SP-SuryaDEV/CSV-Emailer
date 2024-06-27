@@ -18,7 +18,7 @@ def evaluateAngular(index, text):
 
     for template, constant_column in evaluation_dict.items():
       if text.find(template) > -1:
-        text = text.replace(template, str(row[constant_column]))
+        text = text.replace(template, str(row[constant_column].values[0]))
 
   return text
         
@@ -38,7 +38,7 @@ if type(st.session_state.get('data')) == pd.DataFrame:
 
     if send_email:
       for ind, row in st.session_state.data.iterrows():
-        row_email = row['Email'].values[0]
+        row_email = row['Email']
 
         row_subject = evaluateAngular(ind, email_subject)
         row_body = evaluateAngular(ind, email_body)
