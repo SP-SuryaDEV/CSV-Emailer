@@ -10,7 +10,7 @@ def evaluateAngular(index, text):
   evaluation_dict = {
     '<NAME>' : 'Name',
     '<YEAR>' : 'Year',
-    '<DOMAIN>' : '1st Priotity',
+    '<DOMAIN>' : '1st Priority',
     '<TIME>' : 'Time'
   }
 
