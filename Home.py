@@ -34,6 +34,8 @@ if type(st.session_state.get('data')) == pd.DataFrame:
   email_subject = st.text_input('Enter Email Subject here', placeholder='Angular Strings are Accepted')
   email_body = st.text_area('Enter Email Body here', placeholder='Angular Strings are Accepted')
 
+  st.write(email_body)
+
   if email_body and email_subject:
     send_email = st.button('Send Email(s)')
 
