@@ -13,7 +13,7 @@ class Emailer:
         msg['Subject'] = subject  
         msg.set_content(body)
 
-        smtp_server = smtplib.SMTP_SSL('smtp.gmail.com', st.sectrets['PORT'])
+        smtp_server = smtplib.SMTP_SSL('smtp.gmail.com', st.secrets['PORT'])
         smtp_server.login(self.email, self.password)
         smtp_server.send_message(msg)
         smtp_server.quit()
