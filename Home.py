@@ -18,7 +18,7 @@ def evaluateAngular(index, text):
 
     for template, constant_column in evaluation_dict.items():
       if text.find(template) > -1:
-        text = text.replace(template, str(row[constant_column].values[0]))
+        text = text.replace(template, str(row[constant_column]))
 
   return text
         
